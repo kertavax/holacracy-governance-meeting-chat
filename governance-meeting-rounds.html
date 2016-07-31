@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Holacracy Governance Meeting</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+</head>
+<body>
+
+	<section class="round1_checkin">
+		<h3>Round 1/5: Check-in Round</h3>
+		<form id="checkin-form" action="governance-meeting-rounds.html">
+			<label for="user-checkin-description">Call out distractions. Get present – here and now.</label>
+			<input type="text" name="user-checkin-description" class="user-checkin-description" />
+			<button type="submit">Share with others</button>
+		</form>
+	</section>
+
+	<section class="round2_adminConcerns">
+		<h3>Round 2/5: Administrative Concerns</h3>
+		<ul>
+			<li>Time limit: 60mins</li>
+			<li>No lunch</li>
+		</ul>
+		<button type="submit">Got it</button>
+	</section>
+
+	<section class="round3_agendaBuilding">
+		<h3>Round 3/5: Agenda Building</h3>
+		<form id="agendabuild-form" action="governance-meeting-rounds.html">
+			<label for="user-agenda-item">Capture a tension that you are feeling in two or three words.</label>
+			<input type="text" name="user-agenda-item" class="user-agenda-item" />
+			<button type="submit">Capture Agenda Item</button>
+		</form>
+	</section>
+
+	<section class="round4_IDM">
+		<h3>Round 4/5: Integrative Decision-Making</h3>
+		<p>Here are the Agenda Items captured …</p>
+		<ul></ul>
+		<!--
+		Insert 6 subrounds of Integrative Decision-Making …
+
+		1. Present Proposal <input type="text" />
+		2. Clarifying Questions
+		3. Reaction Round
+		4. Amend and Clarify
+		5. Objection Round
+		6. Integration
+		 -->
+	</section>
+
+	<section class="round5_closingRound">
+		<h3>Round 5/5: Closing Round</h3>
+		<form id="closing-form" action="governance-meeting-rounds.html">
+			<label for="user-closing-reflection">Share a closing reflection to improve next meetings.</label>
+			<input type="text" name="user-closing-reflection" class="user-closing-reflection" />
+			<button type="submit">Share with others</button>
+		</form>
+	</section>
+
+<script src="js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
