@@ -1,6 +1,6 @@
 "use strict";
 
-var startGovernanceMeeting = function() {
+var startObjectionTest = function() {
 	var isValidObjectionTest_1 = true;
 	var isValidObjectionTest_2 = true;
 	var isValidObjectionTest_3 = true;
