@@ -10,42 +10,17 @@ $(document).ready(function() {
 	var User = function(name) {
 		this.name = name;
 		this.checkinRoundVal = "";
-		this.agendaItems = ["default tension"];
+		this.agendaItems = [];
 		this.closingReflection = "";
 	};
 
 	var egill = new User("Egill");
 
-	$("#checkin-form").submit(function(event) {
-		egill.checkinRoundVal = $(".user-checkin-description").val();
-		$(".round2_adminConcerns").show();
-		event.preventDefault();
-	});
+	$(".startObjectionTest").on("click", function() {
+		runObjectionTest();
+	})
 
-	$(".round2_adminConcerns")
-		.children("button")
-		.on("click", function(event) {
-			$(".round3_agendaBuilding").show();
-	});
-
-	$("#agendabuild-form").submit(function(event) {
-		egill.agendaItems.push($(".user-agenda-item").val());
-		$(".round4_IDM").show();
-		$(".round5_closingRound").show();
-		for (var i = 0; i < egill.agendaItems.length; i++) {
-			$(".round4_IDM").children("ul").append("<li>" + egill.agendaItems[i] + "</li>");
-		};
-		event.preventDefault();
-	});
-
-	$("#closing-form").submit(function(event) {
-		egill.closingReflection = $(".user-closing-reflection").val();
-		$(this).append("<h1>Thanks for your participation! : )</h1>")
-		console.log(egill);
-		event.preventDefault();
-	});
-
-	var startObjectionTest = function() {
+	var runObjectionTest = function() {
 		var isValidObjectionTest_1 = true;
 		var isValidObjectionTest_2 = true;
 		var isValidObjectionTest_3 = true;
@@ -237,4 +212,34 @@ $(document).ready(function() {
 			}
 		}
 	};
+
+	$("#checkin-form").submit(function(event) {
+		egill.checkinRoundVal = $(".user-checkin-description").val();
+		$(".round2_adminConcerns").show();
+		event.preventDefault();
+	});
+
+	$(".round2_adminConcerns")
+		.children("button")
+		.on("click", function(event) {
+			$(".round3_agendaBuilding").show();
+	});
+
+	$("#agendabuild-form").submit(function(event) {
+		egill.agendaItems.push($(".user-agenda-item").val());
+		$(".round4_IDM").show();
+		$(".round5_closingRound").show();
+		for (var i = 0; i < egill.agendaItems.length; i++) {
+			$(".round4_IDM").children("ul").append("<li>" + egill.agendaItems[i] + "</li>");
+		};
+		event.preventDefault();
+	});
+
+	$("#closing-form").submit(function(event) {
+		egill.closingReflection = $(".user-closing-reflection").val();
+		$(this).append("<h1>Thanks for your participation! : )</h1>")
+		console.log(egill);
+		event.preventDefault();
+	});
+
 });
